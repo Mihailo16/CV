@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihailo Mihailović - CV</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cv-container">
@@ -17,7 +17,7 @@
                     <img src="profilna.JPG" alt="Mihailo Mihailović">
                 </div>
                 <h1>Mihailo Mihailović</h1>
-                <h2>IT Inženjer</h2>
+                <h2>IT Developer</h2>
                 <p class="profile-description">
                     Motivisan i posvećen učenik sa snažnim interesovanjem za oblast informacionih tehnologija. 
                     Težim poziciji IT inženjera u kompaniji koja vrednuje inovativnost, timski rad i kontinuirano usavršavanje.
@@ -28,19 +28,19 @@
                 <h3>KONTAKT</h3>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Čačak, Srbija</span>
+                    <span><a href="https://www.google.com/maps/search/Čačak,+Serbia" target="_blank" class="contact-link">Čačak, Serbia</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+381 64 3709517</span>
+                    <span><a href="#" class="contact-link phone-link" onclick="copyPhoneNumber('+381643709517'); return false;">+381 64 3709517</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>mihailogg@gmail.com</span>
+                    <span><a href="mailto:mihailogg@gmail.com" class="contact-link">mihailogg@gmail.com</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>mihailo16gmc@gmail.com</span>
+                    <span><a href="mailto:mihailo16gmc@gmail.com" class="contact-link">mihailo16gmc@gmail.com</a></span>
                 </div>
             </div>
 
@@ -104,6 +104,16 @@
             <div class="experience-section">
                 <h3>RADNO ISKUSTVO</h3>
                 <div class="experience-item">
+                    <h4>Glavni Developer - Kancelarija za mlade</h4>
+                    <span class="date">2024 - 2025</span>
+                    <p>Razvoj kompletnog web sajta za kancelariju za mlade. Odgovoran za frontend i backend razvoj, dizajn korisničkog interfejsa, implementaciju funkcionalnosti i optimizaciju performansi. Sajt omogućava mladima lakši pristup pravnim uslugama i informacijama.</p>
+                </div>
+                <div class="experience-item">
+                    <h4>Developer - Aplikacija za generisanje ponuda</h4>
+                    <span class="date">2024</span>
+                    <p>Razvoj custom aplikacije za generisanje ponuda za klijenta. Aplikacija automatski generiše profesionalne ponude na osnovu unetih parametara, sa mogućnošću prilagođavanja template-a i eksportovanja u različite formate. Implementirane su napredne funkcionalnosti za upravljanje bazom podataka i generisanje PDF dokumenata.</p>
+                </div>
+                <div class="experience-item">
                     <h4>Spotter - Drift Tim</h4>
                     <span class="date">2023 - 2025</span>
                     <p>Pozicija koja zahteva maksimalnu odgovornost, ostru percepciju i procenu situacija u realnom vremenu. Odgovaran za bezbednost vozača i ekipe tokom drift događaja, koordinaciju sa drugim članovima tima i praćenje performansi vozila u visokorizičnim uslovima.</p>
@@ -111,7 +121,7 @@
                 <div class="experience-item">
                     <h4>Volontiranje i Timski Lider</h4>
                     <span class="date">2022 - 2025</span>
-                    <p>Nema formalnog radnog iskustva u IT sektoru, ali posedujem izuzetne organizacione sposobnosti i iskustvo u vođenju i koordinaciji timova kroz vannastavne aktivnosti i volontiranje.</p>
+                    <p>Nemam formalnog radnog iskustva u IT sektoru, ali posedujem izuzetne organizacione sposobnosti i iskustvo u vođenju i koordinaciji timova kroz vannastavne aktivnosti i volontiranje.</p>
                 </div>
             </div>
 
@@ -180,9 +190,102 @@
                     <div class="skill-tag">Situaciona svest</div>
                     <div class="skill-tag">Odlučnost pod pritiskom</div>
                     <div class="skill-tag">Proaktivan pristup</div>
+                    <div class="skill-tag">Full-stack razvoj</div>
+                    <div class="skill-tag">PDF generisanje</div>
+                    <div class="skill-tag">Database management</div>
+                    <div class="skill-tag">UI/UX dizajn</div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Kopiranje broja telefona - poboljšana verzija
+        function copyPhoneNumber(phoneNumber) {
+            // Prvi pokušaj - moderni clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    showNotification('Broj telefona kopiran!', 'success');
+                }).catch(function(err) {
+                    console.log('Clipboard API ne radi:', err);
+                    fallbackCopy(phoneNumber);
+                });
+            } else {
+                // Fallback za starije pregledače ili HTTP
+                fallbackCopy(phoneNumber);
+            }
+        }
+
+        function fallbackCopy(phoneNumber) {
+            try {
+                // Kreiranje textarea elementa
+                const textArea = document.createElement('textarea');
+                textArea.value = phoneNumber;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                // Pokušaj kopiranja
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    showNotification('Broj telefona kopiran!', 'success');
+                } else {
+                    showNotification('Kopiranje nije uspešno. Broj: ' + phoneNumber, 'error');
+                }
+            } catch (err) {
+                console.log('Fallback kopiranje ne radi:', err);
+                showNotification('Broj telefona: ' + phoneNumber, 'error');
+            }
+        }
+
+        // Prikazivanje notifikacije
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#10b981' : '#ef4444'};
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                animation: slideInRight 0.3s ease-out;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 2000);
+        }
+
+        // CSS animacije za notifikacije
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
