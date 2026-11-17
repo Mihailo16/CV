@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihailo Mihailović - CV</title>
+    <meta name="description" content="Mihailo Mihailović – IT Developer-Manager. Student inženjerskog menadžmenta na FTN Novi Sad sa iskustvom u web razvoju i vođenju projekata.">
+    <meta name="author" content="Mihailo Mihailović">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Prikaz pri deljenju linka (LinkedIn, Viber, WhatsApp, Facebook) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mihailo Mihailović – IT Developer-Manager">
+    <meta property="og:description" content="Student inženjerskog menadžmenta (FTN Novi Sad) sa iskustvom u web razvoju i vođenju projekata. CV na srpskom i engleskom.">
+    <meta property="og:url" content="https://mihailo16.github.io/CV/">
+    <meta property="og:image" content="https://mihailo16.github.io/CV/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="sr_RS">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mihailo Mihailović – IT Developer-Manager">
+    <meta name="twitter:image" content="https://mihailo16.github.io/CV/og-image.jpg">
+
+    <!-- Ikonica -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Izbor jezika i preuzimanje PDF-a -->
+    <div class="top-actions">
+        <a class="pdf-btn" id="pdf-btn" href="CV_Mihailo_Mihailovic_SR.pdf" download>
+            <i class="fas fa-file-arrow-down"></i>
+            <span data-i18n="pdf_btn">Preuzmi PDF</span>
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Jezik / Language">
+            <button type="button" class="lang-btn active" data-lang="sr" aria-pressed="true">SRP</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">ENG</button>
+        </div>
+    </div>
+
     <div class="cv-container">
         <!-- Leva kolona - Profil i kontakt -->
         <div class="left-column">
@@ -17,51 +51,47 @@
                     <img src="profilna.jpg" alt="Mihailo Mihailović">
                 </div>
                 <h1>Mihailo Mihailović</h1>
-                <h2>IT Developer</h2>
-                <p class="profile-description">
-                    Motivisan i posvećen student sa snažnim interesovanjem za oblast informacionih tehnologija. 
-                    Težim poziciji menadžera u kompaniji koja vrednuje inovativnost, timski rad i kontinuirano usavršavanje.
+                <h2>IT Developer-Manager</h2>
+                <p class="profile-description" data-i18n="profile">
+                    Motivisan i posvećen student inženjerskog menadžmenta sa snažnim interesovanjem za oblast informacionih tehnologija.
+                    Spajam iskustvo u razvoju softvera sa organizacionim i liderskim veštinama i težim poziciji menadžera u kompaniji koja vrednuje inovativnost, timski rad i kontinuirano usavršavanje.
                 </p>
             </div>
 
             <div class="contact-section">
-                <h3>KONTAKT</h3>
+                <h3 data-i18n="h_contact">KONTAKT</h3>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span><a href="https://www.google.com/maps/search/Grozde+Gajšin+6,+Novi+Sad,+Serbia" target="_blank" class="contact-link">Grozde Gajšin 6, Novi Sad</a></span>
+                    <span><a href="https://www.google.com/maps/search/Novi+Sad,+Serbia" target="_blank" class="contact-link">Novi Sad</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span><a href="#" class="contact-link phone-link" onclick="copyPhoneNumber('+381643709517'); return false;">+381 64 3709517</a></span>
+                    <span><a href="tel:+381643709517" class="contact-link phone-link" onclick="copyPhoneNumber('+381643709517'); return false;">+381 64 3709517</a></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <span><a href="mailto:mihailogg@gmail.com" class="contact-link">mihailogg@gmail.com</a></span>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span><a href="mailto:mihailo16gmc@gmail.com" class="contact-link">mihailo16gmc@gmail.com</a></span>
-                </div>
             </div>
 
             <div class="education-section">
-                <h3>OBRAZOVANJE</h3>
+                <h3 data-i18n="h_education">OBRAZOVANJE</h3>
                 <div class="education-item">
-                    <h4>Fakultet tehničkih nauka, Novi Sad</h4>
-                    <p>Inženjerski menadžment - prva godina osnovnih studija</p>
-                    <span class="date">2026 -</span>
+                    <h4 data-i18n="edu1_title">Fakultet tehničkih nauka, Novi Sad</h4>
+                    <p data-i18n="edu1_desc">Inženjerski menadžment – prva godina osnovnih studija</p>
+                    <span class="date" data-i18n="since_2026">2026 – danas</span>
                 </div>
                 <div class="education-item">
-                    <h4>Tehnička škola Čačak</h4>
-                    <p>Smer: Elektrotehničar informacionih tehnologija</p>
-                    <span class="date">2022 - 2025</span>
+                    <h4 data-i18n="edu2_title">Tehnička škola Čačak</h4>
+                    <p data-i18n="edu2_desc">Smer: Elektrotehničar informacionih tehnologija</p>
+                    <span class="date">2022 – 2025</span>
                 </div>
             </div>
 
             <div class="languages-section">
-                <h3>JEZICI</h3>
+                <h3 data-i18n="h_languages">JEZICI</h3>
                 <div class="language-item">
-                    <span>Srpski</span>
+                    <span data-i18n="lang_sr">Srpski</span>
                     <div class="skill-dots">
                         <span class="dot filled"></span>
                         <span class="dot filled"></span>
@@ -71,7 +101,7 @@
                     </div>
                 </div>
                 <div class="language-item">
-                    <span>Engleski</span>
+                    <span data-i18n="lang_en">Engleski</span>
                     <div class="skill-dots">
                         <span class="dot filled"></span>
                         <span class="dot filled"></span>
@@ -82,174 +112,323 @@
                 </div>
             </div>
 
+            <div class="license-section">
+                <h3 data-i18n="h_license">VOZAČKA DOZVOLA</h3>
+                <div class="license-item">
+                    <i class="fas fa-id-card"></i>
+                    <span data-i18n="license_b">B kategorija</span>
+                </div>
+            </div>
+
             <div class="interests-section">
-                <h3>INTERESI</h3>
+                <h3 data-i18n="h_interests">INTERESI</h3>
                 <div class="interest-item">
                     <i class="fas fa-car"></i>
-                    <span>Automobili</span>
+                    <span data-i18n="int_cars">Automobili</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span data-i18n="int_sim">Sim drift</span>
                 </div>
                 <div class="interest-item">
                     <i class="fas fa-laptop-code"></i>
-                    <span>Tehnologija</span>
+                    <span data-i18n="int_tech">Tehnologija</span>
                 </div>
                 <div class="interest-item">
                     <i class="fas fa-hands-helping"></i>
-                    <span>Volonterizam</span>
+                    <span data-i18n="int_vol">Volonterizam</span>
                 </div>
                 <div class="interest-item">
                     <i class="fas fa-running"></i>
-                    <span>Sport</span>
+                    <span data-i18n="int_sport">Sport</span>
                 </div>
             </div>
         </div>
 
-        <!-- Desna kolona - Radno iskustvo i veštine -->
+        <!-- Desna kolona - Postignuća, iskustvo i veštine -->
         <div class="right-column">
 
+            <div class="achievements-section">
+                <h3 data-i18n="h_achievements">ISTAKNUTA POSTIGNUĆA</h3>
+                <div class="achievement-item">
+                    <div class="achievement-body">
+                        <h4 data-i18n="ach1_title">3. mesto – Galaksija kup X</h4>
+                        <span class="date" data-i18n="ach1_badge">Državno takmičenje · 10. jubilarno izdanje</span>
+                        <p data-i18n="ach1_desc">Kao član tima osvojio 3. mesto na jubilarnom, desetom Galaksija kupu – državnom takmičenju Zajednice elektrotehničkih škola Srbije u razvoju tehničkih rešenja zasnovanih na mikrokontrolerskim platformama. Učestvovao u osmišljavanju, razvoju i prezentaciji projekta pred stručnim žirijem.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-body">
+                        <h4 data-i18n="ach2_title">Dvostruki šampion Balkana – Sim drift</h4>
+                        <span class="date" data-i18n="ach2_badge">Međunarodno takmičenje · Prvenstvo Balkana</span>
+                        <p data-i18n="ach2_desc">Dvostruki šampion Balkana u sim driftu. Takmičenja na ovom nivou zahtevaju preciznost, koncentraciju, brzo donošenje odluka i doslednost pod pritiskom, kao i kontinuiran rad na analizi i unapređenju sopstvenih performansi.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="experience-section">
-                <h3>RADNO ISKUSTVO</h3>
+                <h3 data-i18n="h_experience">ISKUSTVO I AKTIVNOSTI</h3>
                 <div class="experience-item">
-                    <h4>Član - ESTIEM</h4>
-                    <span class="date">2026 -</span>
-                    <p>Član ESTIEM-a (Evropska asocijacija studenata inženjerskog menadžmenta i industrijskog inženjerstva). Učešće u studentskim projektima, razmenama i događajima, razvoj timskog rada, organizacionih i komunikacionih veština kroz međunarodnu mrežu studenata.</p>
+                    <h4 data-i18n="exp1_title">Član – ESTIEM</h4>
+                    <span class="date" data-i18n="since_2026">2026 – danas</span>
+                    <p data-i18n="exp1_desc">Član ESTIEM-a (Evropska asocijacija studenata inženjerskog menadžmenta i industrijskog inženjerstva). Učešće u studentskim projektima, razmenama i događajima, razvoj timskog rada, organizacionih i komunikacionih veština kroz međunarodnu mrežu studenata.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Glavni Developer - Kancelarija za mlade</h4>
-                    <span class="date">2024 -</span>
-                    <p>Razvoj kompletnog web sajta za kancelariju za mlade. Odgovoran za frontend i backend razvoj, dizajn korisničkog interfejsa, implementaciju funkcionalnosti i optimizaciju performansi. Sajt omogućava mladima lakši pristup pravnim uslugama i informacijama.</p>
+                    <h4 data-i18n="exp2_title">Idejni tvorac akcija – Kancelarija za mlade Čačak</h4>
+                    <span class="date" data-i18n="since_2026">2026 – danas</span>
+                    <p data-i18n="exp2_desc">Osmislio humanitarne i društvene akcije „Dan ljubaznosti“ i „Daruj radost, deli sreću“ u okviru Kancelarije za mlade Čačak. Glavni nosilac ideje i koncepta akcija, koje se i dalje uspešno organizuju. Ovo iskustvo pokazuje moju kreativnost, inicijativu i sposobnost da ideju pretvorim u projekat koji okuplja mlade i doprinosi zajednici.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Idejni tvorac akcija - Kancelarija za mlade Čačak</h4>
-                    <span class="date">2026 -</span>
-                    <p>Osmislio humanitarne i društvene akcije "Dan Ljubaznosti" i "Daruj radost, deli sreću" u okviru Kancelarije za mlade u Čačku. Glavni nosilac ideje i koncepta akcija, koje se i dalje uspešno organizuju. Ovo iskustvo pokazuje moju kreativnost, inicijativu i sposobnost da ideju pretvorim u projekat koji okuplja mlade i doprinosi zajednici.</p>
+                    <h4 data-i18n="exp3_title">Glavni developer – Kancelarija za mlade Čačak</h4>
+                    <span class="date" data-i18n="since_2024">2024 – danas</span>
+                    <p data-i18n="exp3_desc">Razvoj kompletnog web sajta za Kancelariju za mlade Čačak. Odgovoran za frontend i backend razvoj, dizajn korisničkog interfejsa, implementaciju funkcionalnosti i optimizaciju performansi. Sajt omogućava mladima lakši pristup pravnim uslugama i informacijama.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Developer - Aplikacija za generisanje ponuda</h4>
+                    <h4 data-i18n="exp4_title">Developer – Aplikacija za generisanje ponuda</h4>
                     <span class="date">2024</span>
-                    <p>Razvoj custom aplikacije za generisanje ponuda za klijenta. Aplikacija automatski generiše profesionalne ponude na osnovu unetih parametara, sa mogućnošću prilagođavanja template-a i eksportovanja u različite formate. Implementirane su napredne funkcionalnosti za upravljanje bazom podataka i generisanje PDF dokumenata.</p>
+                    <p data-i18n="exp4_desc">Razvoj namenske aplikacije za generisanje ponuda za klijenta. Aplikacija automatski generiše profesionalne ponude na osnovu unetih parametara, uz mogućnost prilagođavanja šablona i izvoza u različite formate. Implementirane su napredne funkcionalnosti za upravljanje bazom podataka i generisanje PDF dokumenata.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Spotter - Drift Tim</h4>
-                    <span class="date">2023 -</span>
-                    <p>Pozicija koja zahteva maksimalnu odgovornost, oštru percepciju i procenu situacija u realnom vremenu. Odgovaran za bezbednost vozača i ekipe tokom drift događaja, koordinaciju sa drugim članovima tima i praćenje performansi vozila u visokorizičnim uslovima.</p>
+                    <h4 data-i18n="exp5_title">Spotter – Drift tim</h4>
+                    <span class="date" data-i18n="since_2023">2023 – danas</span>
+                    <p data-i18n="exp5_desc">Pozicija koja zahteva maksimalnu odgovornost, oštru percepciju i procenu situacija u realnom vremenu. Odgovoran za bezbednost vozača i ekipe tokom drift događaja, koordinaciju sa drugim članovima tima i praćenje performansi vozila u visokorizičnim uslovima.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Crni pojas 1. dan - Realni Aikido</h4>
-                    <span class="date">2022 -</span>
-                    <p>Posedujem crni pojas 1. dan u realnom aikidou, što dokazuje moju disciplinu, fizičku kondiciju, sposobnost kontrole stresa i odlučnost u postizanju dugoročnih ciljeva. Ova veština razvija i timski rad, komunikaciju i liderstvo.</p>
+                    <h4 data-i18n="exp6_title">Crni pojas 1. dan – Realni aikido</h4>
+                    <span class="date" data-i18n="since_2022">2022 – danas</span>
+                    <p data-i18n="exp6_desc">Posedujem crni pojas 1. dan u realnom aikidou, što dokazuje moju disciplinu, fizičku kondiciju, sposobnost kontrole stresa i odlučnost u postizanju dugoročnih ciljeva. Ova veština razvija i timski rad, komunikaciju i liderstvo.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Automobilska dijagnostika - VCDS i ODIS</h4>
-                    <span class="date">2022 -</span>
-                    <p>Odlično poznavanje programa VCDS (VAG-COM Diagnostic System) i ODIS (Offboard Diagnostic Information System) za dijagnostiku i servis automobila. Ova veština pokazuje moju tehničku preciznost, analitičko razmišljanje i sposobnost rada sa kompleksnim softverskim sistemima.</p>
+                    <h4 data-i18n="exp7_title">Automobilska dijagnostika – VCDS i ODIS</h4>
+                    <span class="date" data-i18n="since_2022">2022 – danas</span>
+                    <p data-i18n="exp7_desc">Odlično poznavanje programa VCDS (VAG-COM Diagnostic System) i ODIS (Offboard Diagnostic Information System) za dijagnostiku i servis automobila. Ova veština pokazuje moju tehničku preciznost, analitičko razmišljanje i sposobnost rada sa kompleksnim softverskim sistemima.</p>
                 </div>
                 <div class="experience-item">
-                    <h4>Volontiranje i Timski Lider</h4>
-                    <span class="date">2022 -</span>
-                    <p>Nemam formalnog radnog iskustva u IT sektoru, ali posedujem izuzetne organizacione sposobnosti i iskustvo u vođenju i koordinaciji timova kroz vannastavne aktivnosti i volontiranje.</p>
+                    <h4 data-i18n="exp8_title">Volonter i timski lider</h4>
+                    <span class="date" data-i18n="since_2022">2022 – danas</span>
+                    <p data-i18n="exp8_desc">Kroz vannastavne aktivnosti i volontiranje stekao sam iskustvo u vođenju i koordinaciji timova, organizaciji događaja i preuzimanju odgovornosti za rezultate tima.</p>
                 </div>
             </div>
 
             <div class="skills-section">
-                <h3>PROFESIONALNE VEŠTINE</h3>
+                <h3 data-i18n="h_skills">PROFESIONALNE VEŠTINE</h3>
                 <div class="skill-item">
                     <span>HTML5</span>
                     <div class="skill-bar">
                         <div class="skill-progress" style="--progress-width: 90%; width: 90%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_adv">Napredno</span>
                 </div>
                 <div class="skill-item">
                     <span>CSS3</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--progress-width: 85%; width: 85%"></div>
+                        <div class="skill-progress" style="--progress-width: 90%; width: 90%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_adv">Napredno</span>
                 </div>
                 <div class="skill-item">
                     <span>JavaScript</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--progress-width: 70%; width: 70%"></div>
+                        <div class="skill-progress" style="--progress-width: 62%; width: 62%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_mid">Srednje</span>
                 </div>
                 <div class="skill-item">
                     <span>C#</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--progress-width: 75%; width: 75%"></div>
+                        <div class="skill-progress" style="--progress-width: 62%; width: 62%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_mid">Srednje</span>
                 </div>
                 <div class="skill-item">
                     <span>SQL</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--progress-width: 80%; width: 80%"></div>
+                        <div class="skill-progress" style="--progress-width: 90%; width: 90%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_adv">Napredno</span>
                 </div>
                 <div class="skill-item">
                     <span>Bootstrap</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--progress-width: 85%; width: 85%"></div>
+                        <div class="skill-progress" style="--progress-width: 90%; width: 90%"></div>
                     </div>
+                    <span class="skill-level" data-i18n="lvl_adv">Napredno</span>
                 </div>
             </div>
 
             <div class="certifications-section">
-                <h3>OBUKE I KURSEVI</h3>
+                <h3 data-i18n="h_training">OBUKE I KURSEVI</h3>
                 <div class="certification-item">
-                    <h4>Aktivno učešće u projektima NVO</h4>
-                    <p>Edukacije i projekti nevladinih organizacija</p>
+                    <h4 data-i18n="cert1_title">Projekti nevladinih organizacija</h4>
+                    <p data-i18n="cert1_desc">Aktivno učešće u edukacijama i projektima NVO</p>
                 </div>
                 <div class="certification-item">
-                    <h4>ESTIEM</h4>
-                    <p>Članstvo u međunarodnoj studentskoj mreži inženjerskog menadžmenta</p>
-                </div>
-                <div class="certification-item">
-                    <h4>Crveni krst</h4>
-                    <p>Sertifikovani treninzi i volontiranje</p>
+                    <h4 data-i18n="cert2_title">Crveni krst</h4>
+                    <p data-i18n="cert2_desc">Sertifikovani treninzi i volontiranje</p>
                 </div>
             </div>
 
             <div class="additional-skills-section">
-                <h3>DODATNE VEŠTINE</h3>
+                <h3 data-i18n="h_additional">DODATNE VEŠTINE</h3>
                 <div class="additional-skills">
                     <div class="skill-tag">Visual Studio</div>
+                    <div class="skill-tag">GitHub</div>
+                    <div class="skill-tag">Trello</div>
                     <div class="skill-tag">Microsoft Office</div>
-                    <div class="skill-tag">Adobe paket</div>
-                    <div class="skill-tag">Timski rad</div>
-                    <div class="skill-tag">Liderstvo</div>
-                    <div class="skill-tag">Komunikacija</div>
-                    <div class="skill-tag">Upravljanje rizikom</div>
-                    <div class="skill-tag">Situaciona svest</div>
-                    <div class="skill-tag">Odlučnost pod pritiskom</div>
-                    <div class="skill-tag">Proaktivan pristup</div>
-                    <div class="skill-tag">Full-stack razvoj</div>
-                    <div class="skill-tag">PDF generisanje</div>
-                    <div class="skill-tag">Database management</div>
-                    <div class="skill-tag">UI/UX dizajn</div>
-                    <div class="skill-tag">VCDS dijagnostika</div>
-                    <div class="skill-tag">ODIS sistem</div>
+                    <div class="skill-tag">Adobe Creative Suite</div>
+                    <div class="skill-tag" data-i18n="tag_team">Timski rad</div>
+                    <div class="skill-tag" data-i18n="tag_lead">Liderstvo</div>
+                    <div class="skill-tag" data-i18n="tag_comm">Komunikacija</div>
+                    <div class="skill-tag" data-i18n="tag_pm">Upravljanje projektima</div>
+                    <div class="skill-tag" data-i18n="tag_risk">Upravljanje rizikom</div>
+                    <div class="skill-tag" data-i18n="tag_sa">Situaciona svest</div>
+                    <div class="skill-tag" data-i18n="tag_pressure">Odlučnost pod pritiskom</div>
+                    <div class="skill-tag" data-i18n="tag_proactive">Proaktivan pristup</div>
+                    <div class="skill-tag" data-i18n="tag_fullstack">Full-stack razvoj</div>
+                    <div class="skill-tag" data-i18n="tag_pdf">Generisanje PDF dokumenata</div>
+                    <div class="skill-tag" data-i18n="tag_db">Upravljanje bazama podataka</div>
+                    <div class="skill-tag" data-i18n="tag_uiux">UI/UX dizajn</div>
+                    <div class="skill-tag" data-i18n="tag_vcds">VCDS dijagnostika</div>
+                    <div class="skill-tag" data-i18n="tag_odis">ODIS dijagnostika</div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Kopiranje broja telefona - poboljšana verzija
+        // ===== Prevodi (srpski je u HTML-u, engleski ovde) =====
+        const translations = {
+            en: {
+                profile: "Motivated and dedicated Engineering Management student with a strong interest in information technology. I combine software development experience with organizational and leadership skills, and I aspire to a management position in a company that values innovation, teamwork and continuous improvement.",
+                h_contact: "CONTACT",
+                h_education: "EDUCATION",
+                edu1_title: "Faculty of Technical Sciences, Novi Sad",
+                edu1_desc: "Engineering Management – first year of undergraduate studies",
+                edu2_title: "Technical School Čačak",
+                edu2_desc: "Major: Information Technology Electrical Technician",
+                since_2026: "2026 – present",
+                since_2024: "2024 – present",
+                since_2023: "2023 – present",
+                since_2022: "2022 – present",
+                h_languages: "LANGUAGES",
+                lang_sr: "Serbian",
+                lang_en: "English",
+                pdf_btn: "Download PDF",
+                h_license: "DRIVING LICENSE",
+                license_b: "Category B",
+                lvl_adv: "Advanced",
+                lvl_mid: "Intermediate",
+                h_interests: "INTERESTS",
+                int_cars: "Cars",
+                int_sim: "Sim drifting",
+                int_tech: "Technology",
+                int_vol: "Volunteering",
+                int_sport: "Sports",
+                h_achievements: "KEY ACHIEVEMENTS",
+                ach1_title: "3rd Place – Galaksija Cup X",
+                ach1_badge: "National competition · 10th anniversary edition",
+                ach1_desc: "As a team member, won 3rd place at the 10th anniversary Galaksija Cup – the national competition of the Association of Electrical Engineering Schools of Serbia in developing technical solutions based on microcontroller platforms. Took part in the concept, development and presentation of the project before an expert jury.",
+                ach2_title: "Two-Time Balkan Champion – Sim Drifting",
+                ach2_badge: "International competition · Balkan Championship",
+                ach2_desc: "Two-time Balkan champion in sim drifting. Competing at this level requires precision, focus, quick decision-making and consistency under pressure, as well as continuous analysis and improvement of one's own performance.",
+                h_experience: "EXPERIENCE AND ACTIVITIES",
+                exp1_title: "Member – ESTIEM",
+                exp1_desc: "Member of ESTIEM (European Students of Industrial Engineering and Management). Participating in student projects, exchanges and events, developing teamwork, organizational and communication skills through an international student network.",
+                exp2_title: "Campaign Creator – Youth Office Čačak",
+                exp2_desc: "Created the humanitarian and community campaigns “Kindness Day” (Dan ljubaznosti) and “Give Joy, Share Happiness” (Daruj radost, deli sreću) at the Youth Office Čačak. Main originator of the idea and concept of both campaigns, which continue to be organized successfully. This experience demonstrates my creativity, initiative and ability to turn an idea into a project that brings young people together and benefits the community.",
+                exp3_title: "Lead Developer – Youth Office Čačak",
+                exp3_desc: "Developed the complete website for the Youth Office Čačak. Responsible for frontend and backend development, user interface design, feature implementation and performance optimization. The website gives young people easier access to legal services and information.",
+                exp4_title: "Developer – Quote Generation Application",
+                exp4_desc: "Developed a custom quote generation application for a client. The application automatically generates professional quotes based on input parameters, with customizable templates and export to multiple formats. Implemented advanced features for database management and PDF document generation.",
+                exp5_title: "Spotter – Drift Team",
+                exp5_desc: "A role that demands full responsibility, sharp perception and real-time situational judgment. Responsible for the safety of drivers and crew during drift events, coordination with other team members and monitoring vehicle performance in high-risk conditions.",
+                exp6_title: "1st Dan Black Belt – Real Aikido",
+                exp6_desc: "I hold a 1st Dan black belt in Real Aikido, which reflects my discipline, physical fitness, stress management and determination in achieving long-term goals. This practice also develops teamwork, communication and leadership.",
+                exp7_title: "Automotive Diagnostics – VCDS and ODIS",
+                exp7_desc: "Excellent command of VCDS (VAG-COM Diagnostic System) and ODIS (Offboard Diagnostic Information System) for vehicle diagnostics and servicing. This skill reflects my technical precision, analytical thinking and ability to work with complex software systems.",
+                exp8_title: "Volunteer and Team Leader",
+                exp8_desc: "Through extracurricular activities and volunteering, I gained experience in leading and coordinating teams, organizing events and taking responsibility for team results.",
+                h_skills: "PROFESSIONAL SKILLS",
+                h_training: "TRAINING AND COURSES",
+                cert1_title: "NGO Projects",
+                cert1_desc: "Active participation in NGO training programs and projects",
+                cert2_title: "Red Cross",
+                cert2_desc: "Certified training and volunteering",
+                h_additional: "ADDITIONAL SKILLS",
+                tag_team: "Teamwork",
+                tag_lead: "Leadership",
+                tag_comm: "Communication",
+                tag_pm: "Project management",
+                tag_risk: "Risk management",
+                tag_sa: "Situational awareness",
+                tag_pressure: "Decisiveness under pressure",
+                tag_proactive: "Proactive approach",
+                tag_fullstack: "Full-stack development",
+                tag_pdf: "PDF document generation",
+                tag_db: "Database management",
+                tag_uiux: "UI/UX design",
+                tag_vcds: "VCDS diagnostics",
+                tag_odis: "ODIS diagnostics",
+                msg_copied: "Phone number copied!",
+                msg_copy_failed: "Copy failed. Number: ",
+                msg_number: "Phone number: "
+            },
+            sr: {
+                msg_copied: "Broj telefona kopiran!",
+                msg_copy_failed: "Kopiranje nije uspešno. Broj: ",
+                msg_number: "Broj telefona: "
+            }
+        };
+
+        // Srpski tekst se preuzima iz HTML-a pri učitavanju
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            const key = el.getAttribute('data-i18n');
+            if (!(key in translations.sr)) translations.sr[key] = el.innerHTML.trim();
+        });
+
+        let currentLang = 'sr';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const text = translations[lang][el.getAttribute('data-i18n')];
+                if (text !== undefined) el.innerHTML = text;
+            });
+            const pdfBtn = document.getElementById('pdf-btn');
+            if (pdfBtn) pdfBtn.href = lang === 'en' ? 'CV_Mihailo_Mihailovic_EN.pdf' : 'CV_Mihailo_Mihailovic_SR.pdf';
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                const active = btn.getAttribute('data-lang') === lang;
+                btn.classList.toggle('active', active);
+                btn.setAttribute('aria-pressed', active);
+            });
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                setLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+
+        function t(key) {
+            return translations[currentLang][key];
+        }
+
+        // Kopiranje broja telefona
         function copyPhoneNumber(phoneNumber) {
-            // Prvi pokušaj - moderni clipboard API
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(phoneNumber).then(function() {
-                    showNotification('Broj telefona kopiran!', 'success');
-                }).catch(function(err) {
-                    console.log('Clipboard API ne radi:', err);
+                    showNotification(t('msg_copied'), 'success');
+                }).catch(function() {
                     fallbackCopy(phoneNumber);
                 });
             } else {
-                // Fallback za starije pregledače ili HTTP
                 fallbackCopy(phoneNumber);
             }
         }
 
         function fallbackCopy(phoneNumber) {
             try {
-                // Kreiranje textarea elementa
                 const textArea = document.createElement('textarea');
                 textArea.value = phoneNumber;
                 textArea.style.position = 'fixed';
@@ -258,19 +437,15 @@
                 document.body.appendChild(textArea);
                 textArea.focus();
                 textArea.select();
-                
-                // Pokušaj kopiranja
                 const successful = document.execCommand('copy');
                 document.body.removeChild(textArea);
-                
                 if (successful) {
-                    showNotification('Broj telefona kopiran!', 'success');
+                    showNotification(t('msg_copied'), 'success');
                 } else {
-                    showNotification('Kopiranje nije uspešno. Broj: ' + phoneNumber, 'error');
+                    showNotification(t('msg_copy_failed') + phoneNumber, 'error');
                 }
             } catch (err) {
-                console.log('Fallback kopiranje ne radi:', err);
-                showNotification('Broj telefona: ' + phoneNumber, 'error');
+                showNotification(t('msg_number') + phoneNumber, 'error');
             }
         }
 
@@ -281,7 +456,7 @@
             notification.textContent = message;
             notification.style.cssText = `
                 position: fixed;
-                top: 20px;
+                top: 70px;
                 right: 20px;
                 background: ${type === 'success' ? '#10b981' : '#ef4444'};
                 color: white;
@@ -293,9 +468,7 @@
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                 animation: slideInRight 0.3s ease-out;
             `;
-            
             document.body.appendChild(notification);
-            
             setTimeout(() => {
                 notification.style.animation = 'slideOutRight 0.3s ease-out';
                 setTimeout(() => {
